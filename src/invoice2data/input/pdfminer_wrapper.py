@@ -16,7 +16,8 @@ def to_text(path):
 
     try:
         # python 2
-        from StringIO import StringIO
+        from io import StringIO
+        from importlib import reload
         import sys
 
         reload(sys)  # noqa: F821

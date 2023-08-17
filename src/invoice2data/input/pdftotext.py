@@ -53,5 +53,5 @@ def to_text(path: str, area_details: dict = None):
         return out.decode('utf-8')
     else:
         raise EnvironmentError(
-            "pdftotext not installed. Can be downloaded from https://poppler.freedesktop.org/"
+            "pdftotext not installed > Python -m pip install poppler-utils."
         )

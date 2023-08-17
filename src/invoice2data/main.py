@@ -1,6 +1,16 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+import sys
+import os
+
+# Get the directory containing this script
+current_dir = os.path.dirname(os.path.abspath(__file__))
+
+# Get the parent directory (invoice2data/src) and add it to the Python path
+parent_dir = os.path.dirname(current_dir)
+sys.path.append(parent_dir)
+
 import argparse
 import copy
 import datetime
@@ -9,19 +19,19 @@ import os
 from os.path import join
 import logging
 
-from .input import pdftotext
-from .input import pdfminer_wrapper
-from .input import pdfplumber
-from .input import tesseract
-from .input import gvision
-from .input import text
-from .input import ocrmypdf
+from input import pdftotext
+from input import pdfminer_wrapper
+from input import pdfplumber
+from input import tesseract
+from input import gvision
+from input import text
+from input import ocrmypdf
 
 from invoice2data.extract.loader import read_templates
 
-from .output import to_csv
-from .output import to_json
-from .output import to_xml
+from output import to_csv
+from output import to_json
+from output import to_xml
 
 logger = logging.getLogger()
 
