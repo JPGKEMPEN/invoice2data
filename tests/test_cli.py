@@ -18,13 +18,13 @@ import csv
 from xml.dom import minidom
 
 try:
-    from StringIO import StringIO  # noqa: F401
+    from io import StringIO  # noqa: F401
 except ImportError:
     from io import StringIO  # noqa: F401
 import unittest
 
 import pkg_resources
-from invoice2data.main import create_parser, main
+from invoice2data.main_original import create_parser, main
 from invoice2data.extract.loader import read_templates
 
 from .common import get_sample_files, exclude_template, inputparser_specific

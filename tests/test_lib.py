@@ -20,7 +20,7 @@ except ImportError:
 import unittest
 from unittest import mock
 
-from invoice2data.main import extract_data
+from invoice2data.main_original import extract_data
 from invoice2data.input import pdfplumber, pdftotext, tesseract, pdfminer_wrapper, ocrmypdf
 from invoice2data.output import to_csv, to_json, to_xml
 from .common import get_sample_files
